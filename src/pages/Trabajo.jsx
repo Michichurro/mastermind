@@ -14,68 +14,7 @@ const Reveal = ({ children, delay = 0, className = '' }) => (
   </motion.div>
 );
 
-const projects = [
-  {
-    title: 'Alma Coffee Co.',
-    category: { es: 'Identidad de Marca', en: 'Brand Identity' },
-    year: '2025',
-    color: '#E05066',
-    desc: {
-      es: 'Identidad visual completa para una marca de café de especialidad. Desde el naming hasta el packaging.',
-      en: 'Complete visual identity for a specialty coffee brand. From naming to packaging.',
-    },
-  },
-  {
-    title: 'Zenith Studio',
-    category: { es: 'Branding + Web', en: 'Branding + Web' },
-    year: '2025',
-    color: '#6CCDF5',
-    desc: {
-      es: 'Rediseño de marca y sitio web para un estudio de arquitectura contemporánea.',
-      en: 'Brand redesign and website for a contemporary architecture studio.',
-    },
-  },
-  {
-    title: 'Patagonia Roots',
-    category: { es: 'Estrategia de Marca', en: 'Brand Strategy' },
-    year: '2024',
-    color: '#5CAA8C',
-    desc: {
-      es: 'Estrategia de posicionamiento y comunicación para una ONG de conservación ambiental.',
-      en: 'Positioning and communication strategy for an environmental conservation NGO.',
-    },
-  },
-  {
-    title: 'Nova Wellness',
-    category: { es: 'Identidad Visual', en: 'Visual Identity' },
-    year: '2024',
-    color: '#F3D55A',
-    desc: {
-      es: 'Sistema de identidad visual y contenido para redes sociales de un centro de bienestar.',
-      en: 'Visual identity system and social media content for a wellness center.',
-    },
-  },
-  {
-    title: 'Meridian Tech',
-    category: { es: 'Branding', en: 'Branding' },
-    year: '2024',
-    color: '#2b38f5',
-    desc: {
-      es: 'Marca completa para una startup fintech. Logo, guidelines y presencia digital.',
-      en: 'Complete brand for a fintech startup. Logo, guidelines, and digital presence.',
-    },
-  },
-  {
-    title: 'Tierra Viva',
-    category: { es: 'Contenido + Redes', en: 'Content + Social' },
-    year: '2023',
-    color: '#E05066',
-    desc: {
-      es: 'Estrategia de contenido y gestión de redes sociales para una marca de productos orgánicos.',
-      en: 'Content strategy and social media management for an organic products brand.',
-    },
-  },
-];
+import { projects } from '../data/projects';
 
 const Trabajo = () => {
   const { language, t } = useLanguage();
@@ -110,19 +49,29 @@ const Trabajo = () => {
               >
                 <div
                   className="aspect-[16/10] rounded-2xl border border-white/10 mb-4 overflow-hidden relative group-hover:border-white/20 transition-all duration-500"
-                  style={{
-                    background: `linear-gradient(135deg, ${project.color}20 0%, ${project.color}05 100%)`,
-                  }}
                 >
-                  {/* Decorative initial */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span
-                      className="text-[8rem] md:text-[10rem] font-gabarito font-bold opacity-[0.04] group-hover:opacity-[0.08] transition-all duration-700 group-hover:scale-110 transform select-none"
-                      style={{ color: project.color }}
-                    >
-                      {project.title[0]}
-                    </span>
-                  </div>
+                  <div 
+                    className="absolute inset-0 transition-transform duration-700 group-hover:scale-110"
+                    style={{
+                      background: project.image 
+                        ? `url(${project.image}) center/cover no-repeat` 
+                        : `linear-gradient(135deg, ${project.color}20 0%, ${project.color}05 100%)`,
+                    }}
+                  />
+                  {/* Overlay for legibility */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none opacity-60" />
+
+                  {/* Decorative initial - only show if no image */}
+                  {!project.image && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span
+                        className="text-[8rem] md:text-[10rem] font-gabarito font-bold opacity-[0.04] group-hover:opacity-[0.08] transition-all duration-700 group-hover:scale-110 transform select-none"
+                        style={{ color: project.color }}
+                      >
+                        {project.title[0]}
+                      </span>
+                    </div>
+                  )}
                   {/* Category pill */}
                   <div className="absolute top-4 left-4">
                     <span
@@ -175,6 +124,16 @@ const Trabajo = () => {
                 <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
               </svg>
             </button>
+
+            {selectedProject.image && (
+              <div className="w-full aspect-video rounded-xl overflow-hidden mb-8 border border-white/5">
+                <img 
+                  src={selectedProject.image} 
+                  alt={selectedProject.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
 
             <span
               className="px-3 py-1 rounded-full text-[10px] tracking-widest uppercase font-bold font-gabarito border inline-block mb-6"
