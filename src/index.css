@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Brand Core - andagain.uk style */
+    --color-bg: #000000;
+    --color-text: #FFFFFF;
+    --color-accent: #ff0000;
+    
+    /* Transition to Black/White */
+    --color-brand-black: #000000;
+    --color-brand-white: #FFFFFF;
+
+    /* Archetype Colors (Simplified for the new aesthetic) */
+    --color-red-action: #E05066;
+    --color-blue-connection: #6CCDF5;
+    --color-yellow-discovery: #F3D55A;
+    --color-green-structure: #5CAA8C;
+
+    /* Fonts */
+    --font-primary: 'Gabarito', sans-serif;
+    --font-secondary: 'Space Mono', monospace;
+  }
+
+  body {
+    @apply bg-[var(--color-bg)] text-[var(--color-text)];
+    font-family: var(--font-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Typography */
+  *,
+  button,
+  input,
+  textarea {
+    font-family: var(--font-primary);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    @apply tracking-tighter;
+  }
+
+  .font-mono {
+    font-family: var(--font-secondary);
+  }
+}
+
+@layer utilities {
+
+  /* Utility classes for direct usage if needed */
+  .text-brand-deep-blue {
+    color: var(--color-brand-deep-blue);
+  }
+
+  .bg-brand-deep-blue {
+    background-color: var(--color-brand-deep-blue);
+  }
+
+  .text-brand-bright-blue {
+    color: var(--color-brand-bright-blue);
+  }
+
+  /* Archetype Utilities */
+  .border-archetype-red {
+    border-color: var(--color-red-action);
+  }
+
+  .bg-archetype-red {
+    background-color: var(--color-red-action);
+  }
+
+  .border-archetype-blue {
+    border-color: var(--color-blue-connection);
+  }
+
+  .bg-archetype-blue {
+    background-color: var(--color-blue-connection);
+  }
+
+  .border-archetype-green {
+    border-color: var(--color-green-structure);
+  }
+
+  .bg-archetype-green {
+    background-color: var(--color-green-structure);
+  }
+
+  .border-archetype-yellow {
+    border-color: var(--color-yellow-discovery);
+  }
+
+  .bg-archetype-yellow {
+    background-color: var(--color-yellow-discovery);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-in;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .animate-slide-up-delay-200 {
+    animation: slideUp 0.8s ease-out 0.2s both;
+  }
+
+  .animate-slide-up-delay-400 {
+    animation: slideUp 0.8s ease-out 0.4s both;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Card flip animation for archetype reveals */
+  @keyframes flipCard {
+    0% {
+      transform: rotateY(0deg);
+    }
+
+    50% {
+      transform: rotateY(90deg);
+    }
+
+    100% {
+      transform: rotateY(0deg);
+    }
+  }
+
+  .animate-flip {
+    animation: flipCard 1s ease-in-out;
+  }
+}
+
+/* Custom animations for results screen */
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+.mask-linear-fade {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+@layer utilities {
+  .font-gabarito {
+    font-family: 'Gabarito', sans-serif;
+  }
+}
+
+/* 3D Ring Styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
