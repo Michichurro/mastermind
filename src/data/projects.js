@@ -10,6 +10,7 @@ export const projects = [
       es: 'Estrategia de contenido visual y dirección de arte para Alvar. Desarrollo de piezas para redes sociales y presencia digital.',
       en: 'Visual content strategy and art direction for Alvar. Development of social media assets and digital presence.',
     },
+    gallery: ["/projects/Alvar/+ SLIDES PARA PRESS - ALVAR-11.png","/projects/Alvar/+ SLIDES PARA PRESS - ALVAR-19.png","/projects/Alvar/+ SLIDES PARA PRESS - ALVAR-20.png","/projects/Alvar/+ SLIDES PARA PRESS - ALVAR-21.png","/projects/Alvar/+ SLIDES PARA PRESS - ALVAR-22.png","/projects/Alvar/+ SLIDES PARA PRESS - ALVAR-23.png","/projects/Alvar/+ SLIDES PARA PRESS - ALVAR-24.png","/projects/Alvar/+ SLIDES PARA PRESS - ALVAR-25.png","/projects/Alvar/+ SLIDES PARA PRESS - ALVAR-26.png","/projects/Alvar/+ SLIDES PARA PRESS - ALVAR-27.png","/projects/Alvar/MOCKUP-DE-FEED-IG-01.png","/projects/Alvar/MOCKUP-DE-FEED-IG-02.png","/projects/Alvar/MOCKUP-DE-FEED-IG-03png.png","/projects/Alvar/RRSS-CAMINO 02-01.png","/projects/Alvar/RRSS-CAMINO 02-02.png","/projects/Alvar/RRSS-CAMINO 02-03.png","/projects/Alvar/RRSS-CAMINO 02-04.png","/projects/Alvar/RRSS-CAMINO 02-05.png","/projects/Alvar/RRSS-CAMINO 02-06.png","/projects/Alvar/RRSS-CAMINO 02-07.png","/projects/Alvar/RRSS-CAMINO 02-08.png","/projects/Alvar/RRSS-CAMINO 02-09.png"],
   },
   {
     id: 'benave-home',
@@ -22,6 +23,7 @@ export const projects = [
       es: 'Sistema de identidad visual completo para Benavé HOME, incluyendo manual de marca y aplicaciones en diversos soportes.',
       en: 'Complete visual identity system for Benavé HOME, including brand manual and applications across various media.',
     },
+    gallery: ["/projects/benave-home/Double-Sided-A5-Flyer-Mockups-01-ajuste02.png","/projects/benave-home/EXPLORACIONES BRANDING - BENAVE-23.png","/projects/benave-home/EXPLORACIONES BRANDING - BENAVE-24.png","/projects/benave-home/EXPLORACIONES BRANDING - BENAVE-25.png","/projects/benave-home/EXPLORACIONES BRANDING - BENAVE-26.png","/projects/benave-home/Free-A5-Greeting-Card-Mockup-ajuste.png","/projects/benave-home/freepik__hagamos-un-montage-de-esta-etiqueta-que-te-conecto__26431.png","/projects/benave-home/Free_Shopping_Bag_Mockup_4-asdasd.png","/projects/benave-home/Label-Tag-Mockup-ajuste-01.jpg","/projects/benave-home/LEMON---Business-Card-Mockup.jpg","/projects/benave-home/MOCKUP-LOCAL--02.png","/projects/benave-home/MOCKUP-UNIFORME-final-01.png","/projects/benave-home/Paper_Bag_Mockup_4asdasd.png","/projects/benave-home/PLANTILLA - BENAVÉ - RRSS-01.png","/projects/benave-home/PLANTILLA - BENAVÉ - RRSS-03.png","/projects/benave-home/PLANTILLA - BENAVÉ - RRSS-04.png","/projects/benave-home/PLANTILLA - BENAVÉ - RRSS-05.png","/projects/benave-home/PLANTILLA - BENAVÉ - RRSS-06.png","/projects/benave-home/PLANTILLA - BENAVÉ - RRSS-07.png","/projects/benave-home/Square_Signboard_Mockup_1---01.png"],
   },
   {
     id: 'derosca',
@@ -34,6 +36,7 @@ export const projects = [
       es: 'Desarrollo de branding y diseño de packaging para Derosca, resaltando la esencia de la marca en sus productos.',
       en: 'Branding development and packaging design for Derosca, highlighting the essence of the brand in its products.',
     },
+    gallery: ["/projects/Derosca/camino-01.png","/projects/Derosca/Free-Business-Card-on-Metal-Background-Mockup.jpg","/projects/Derosca/Free-Kraft-Paper-Bag-Mockup.png","/projects/Derosca/Free_Billboard_Mockup_1.jpg","/projects/Derosca/HydroFlaskBottle07.jpg","/projects/Derosca/KV - 01 - BRANDING DEROSCA [Recovered]-03.png","/projects/Derosca/KV - 01 - BRANDING DEROSCA [Recovered]-04.png","/projects/Derosca/KV - 01 - BRANDING DEROSCA [Recovered]-05.png","/projects/Derosca/KV - 01 - BRANDING DEROSCA [Recovered]-06.png","/projects/Derosca/KV - 01 - BRANDING DEROSCA [Recovered]-07.png","/projects/Derosca/KV - 01 - BRANDING DEROSCA [Recovered]-09.png","/projects/Derosca/KV - 01 - BRANDING DEROSCA [Recovered]-10.png","/projects/Derosca/KV - 01 - BRANDING DEROSCA [Recovered]-11.png","/projects/Derosca/KV - 01 - BRANDING DEROSCA [Recovered]-12.png","/projects/Derosca/KV - 01 - BRANDING DEROSCA [Recovered]-13.png","/projects/Derosca/KV - 01 - BRANDING DEROSCA [Recovered]-14.png","/projects/Derosca/KV---01---BRANDING-DEROSCA-[Recovered]-05.png","/projects/Derosca/KV---01---BRANDING-DEROSCA-[Recovered].png","/projects/Derosca/Product-Brand-Boxes-Free-psd-Packaging-Mockup.png"],
   },
   {
     id: 'norte-19',
@@ -46,6 +49,7 @@ export const projects = [
       es: 'Identidad digital y desarrollo web para Norte 19. Un enfoque minimalista y funcional para su presencia en línea.',
       en: 'Digital identity and web development for Norte 19. A minimalist and functional approach for their online presence.',
     },
+    gallery: ["/projects/norte-19/Macbook_Air_Mockup_2.png","/projects/norte-19/MOCKUP-UNIFORME-2.png","/projects/norte-19/PROYECTOS 2025 - MASTERMIND-42.png","/projects/norte-19/PROYECTOS 2025 - MASTERMIND_Mesa de trabajo 32 copia 29.png","/projects/norte-19/PROYECTOS 2025 - MASTERMIND_Mesa de trabajo 32 copia 30.png","/projects/norte-19/PROYECTOS 2025 - MASTERMIND_Mesa de trabajo 32 copia 31.png","/projects/norte-19/SECUENCIA 1_1.mp4","/projects/norte-19/SECUENCIA 2 4-5_1.mp4","/projects/norte-19/SECUENCIA 3_1.mp4","/projects/norte-19/SECUENCIA 4_1.mp4","/projects/norte-19/SECUENCIA 5_1.mp4","/projects/norte-19/SECUENCIA 6_1.mp4","/projects/norte-19/SECUENCIA 7_1.mp4","/projects/norte-19/SECUENCIA 8_1.mp4","/projects/norte-19/Square_Signboard_Mockup_2.png"],
   },
   {
     id: 'nuda',
@@ -58,5 +62,6 @@ export const projects = [
       es: 'Diseño de logotipos y sistema visual para Nuda, enfocado en la simplicidad y la elegancia tipográfica.',
       en: 'Logotype design and visual system for Nuda, focused on simplicity and typographic elegance.',
     },
+    gallery: ["/projects/Nuda/BAJADA LOGOS NUDA - 03 MARZO 2026.png","/projects/Nuda/BAJADA LOGOS NUDA - 03 MARZO 2026asd.png","/projects/Nuda/freepik__objetivo-generar-un-mockup-tipo-etiqueta-circular-__14670.png","/projects/Nuda/freepik__packaging-de-delivery-elegante-para-la-marca-nuda-__14672.png"],
   },
 ];

@@ -112,9 +112,11 @@ const Trabajo = () => {
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className="relative max-w-2xl w-full bg-[#1d0981]/95 backdrop-blur-xl rounded-[2rem] border border-white/10 p-8 md:p-12"
+            className="relative max-w-4xl max-h-[90vh] overflow-y-auto w-full bg-[#1d0981]/95 backdrop-blur-xl rounded-[2rem] border border-white/10 p-8 md:p-12"
+            style={{ scrollbarWidth: 'none' }}
             onClick={(e) => e.stopPropagation()}
           >
+            <style>{`.overflow-y-auto::-webkit-scrollbar { display: none; }`}</style>
             <button
               onClick={() => setSelectedProject(null)}
               className="absolute top-6 right-6 text-white/40 hover:text-white transition-colors cursor-pointer"
@@ -157,6 +159,23 @@ const Trabajo = () => {
               <span className="w-1 h-1 rounded-full bg-white/20" />
               <span>{selectedProject.category[language]}</span>
             </div>
+
+            {selectedProject.gallery && selectedProject.gallery.length > 0 && (
+              <div className="mt-16 space-y-6">
+                {selectedProject.gallery.map((media, idx) => {
+                  const isVideo = media.toLowerCase().endsWith('.mp4') || media.toLowerCase().endsWith('.webm');
+                  return (
+                    <div key={idx} className="w-full rounded-2xl overflow-hidden border border-white/5 bg-black/20">
+                      {isVideo ? (
+                        <video src={media} className="w-full h-auto object-cover" autoPlay loop muted playsInline />
+                      ) : (
+                        <img src={media} alt={`${selectedProject.title} gallery ${idx}`} className="w-full h-auto object-cover" loading="lazy" />
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </motion.div>
         </motion.div>
       )}
