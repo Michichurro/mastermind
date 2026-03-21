@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
+import { projects } from '../data/projects';
 
 // Scroll-reveal animation wrapper
 const Reveal = ({ children, delay = 0, className = '' }) => (
@@ -19,6 +20,7 @@ const Reveal = ({ children, delay = 0, className = '' }) => (
 const Home = () => {
   const { t } = useLanguage();
   const s = t.site?.home || {};
+  const displayProjects = projects.slice(0, 4);
 
   return (
     <div className="overflow-hidden bg-[var(--color-bg)] text-[var(--color-text)]">
@@ -93,43 +95,33 @@ const Home = () => {
         </Reveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-32">
-          {[
-            {
-              title: 'Alma Coffee Co.',
-              category: s.categoryBranding || 'Branding',
-              year: '2025',
-              index: '01'
-            },
-            {
-              title: 'Zenith Studio',
-              category: s.categoryIdentity || 'Identidad Visual',
-              year: '2025',
-              index: '02'
-            },
-            {
-              title: 'Patagonia Roots',
-              category: s.categoryStrategy || 'Estrategia de Marca',
-              year: '2024',
-              index: '03'
-            },
-          ].map((project, i) => (
-            <Reveal key={project.title} delay={i * 0.1} className={i === 1 ? 'lg:mt-32' : ''}>
+          {displayProjects.map((project, i) => (
+            <Reveal key={project.title} delay={i * 0.1} className={i % 2 === 1 ? 'lg:mt-32' : ''}>
               <Link
                 to="/trabajo"
                 className="group block w-full"
               >
                 <div className="aspect-[16/10] bg-white/5 border border-white/10 mb-8 overflow-hidden relative group-hover:border-white/30 transition-all duration-700">
-                   <div className="absolute inset-0 flex items-center justify-center grayscale opacity-20 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-1000 scale-100 group-hover:scale-105">
-                     <span className="text-[10rem] font-bold text-white/[0.05]">
-                        {project.title[0]}
-                     </span>
+                   <div 
+                     className="absolute inset-0 grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-1000 scale-100 group-hover:scale-105"
+                     style={{
+                       background: project.image ? `url(${project.image}) center/cover no-repeat` : `linear-gradient(135deg, ${project.color}20 0%, ${project.color}05 100%)`
+                     }}
+                   >
+                     {!project.image && (
+                       <div className="absolute inset-0 flex items-center justify-center">
+                         <span className="text-[10rem] font-bold text-white/[0.05]" style={{ color: project.color }}>
+                            {project.title[0]}
+                         </span>
+                       </div>
+                     )}
                    </div>
                 </div>
                 
                 <div className="flex justify-between items-start border-t border-white/10 pt-6">
                   <div>
-                    <span className="font-mono text-[10px] text-white/30 uppercase tracking-widest block mb-2">
-                       {project.index} — {project.category}
+                    <span className="font-mono text-[10px] text-white/30 uppercase tracking-widest block mb-2" style={{ color: project.color }}>
+                       0{i + 1} — {project.category.es /* simple fallback */}
                     </span>
                     <h3 className="text-3xl font-bold uppercase group-hover:translate-x-2 transition-transform duration-500">
                       {project.title}
